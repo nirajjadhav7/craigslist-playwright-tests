@@ -17,7 +17,6 @@ public class HousingPage {
     // Navigate to housing page
     public void navigateToHousing() {
         page.navigate("https://madrid.craigslist.org/");
-
         page.locator("#langlinks a").click();
         page.click("//*[@id=\"hhh\"]/h3/a/span");
       
@@ -70,7 +69,7 @@ public class HousingPage {
     }
     
     
-/// Search Under Search Housing Field   
+     // Search Under Search Housing Field   
     public HousingPage searchHousing(String keyword) {
         Locator searchBox = page.getByPlaceholder("Search housing");
         searchBox.fill(keyword);

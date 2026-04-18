@@ -7,6 +7,10 @@ import pages.HousingPage;
 
 public class HousingTests extends BaseTest {
 
+	
+	/*
+	    Sorting on housing page "£££ → £"	 
+	 */
     @Test
     public void selectPriceHighToLowTest() {
 
@@ -22,6 +26,9 @@ public class HousingTests extends BaseTest {
         Assert.assertEquals(selected, "£££ → £");
     }
     
+    /*
+         Sorting on housing page "£ → £££"	 
+    */
     
     @Test
     public void selectPriceLowToHighTest() {
@@ -37,7 +44,9 @@ public class HousingTests extends BaseTest {
         Assert.assertEquals(selected, "£ → £££");
     }
     
-    
+    /*
+          Sorting on housing page "newest"	 
+    */
     
     @Test
     public void selectNewestTest() {
@@ -54,6 +63,10 @@ public class HousingTests extends BaseTest {
     }
     
     
+      /*
+            Sorting on housing page "relevance"	 
+      */
+    
     @Test
     public void selectRelevancetTest() {
 
@@ -69,6 +82,9 @@ public class HousingTests extends BaseTest {
         Assert.assertEquals(selected, "relevance");
     }
     
+       /*
+            Sorting on housing page "upcoming"	 
+       */
     
     @Test
     public void selectUpcomingtTest() {
