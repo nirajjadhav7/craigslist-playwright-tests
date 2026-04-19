@@ -22,20 +22,20 @@ public class HousingPage {
       
     }
 
-    // Click sorting dropdown
+    // Click sorting drop-down
     public void openSortDropdown() {
     
     	page.locator("div.cl-search-sort-mode").click();
     }
 
-    // Select price high to low
+    // Select price high to low 
     public void selectPriceHighToLow() {
     	
         page.locator("button.cl-search-sort-mode-price-desc").click();
         
     }
 
-    // Get selected label
+    // Get selected label high to low
     public String getSelectedSortText() {
     	
         return page.locator("button.cl-search-sort-mode-price-desc .label").innerText();
@@ -43,7 +43,7 @@ public class HousingPage {
     }
     
     
- // Select price low to high
+   // Select price low to high
     public void selectPriceLowToHigh() {
         page.locator("button.cl-search-sort-mode-price-asc").click();
      

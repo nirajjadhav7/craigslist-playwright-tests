@@ -9,9 +9,10 @@ public class HousingTests extends BaseTest {
 
 	
 	/*
-	    Sorting on housing page "£££ → £"	 
+	    Sorting on housing page "£££ → £" (HighToLow)	 
 	 */
-    @Test
+    @Test (testName = "Sorting on housing page - £££ → £ (HighToLow)")
+
     public void selectPriceHighToLowTest() {
 
         HousingPage housing = new HousingPage(page);
@@ -27,10 +28,10 @@ public class HousingTests extends BaseTest {
     }
     
     /*
-         Sorting on housing page "£ → £££"	 
+         Sorting on housing page "£ → £££" (LowToHigh)	 
     */
     
-    @Test
+    @Test (testName = "Sorting on housing page - £ → £££ (LowToHigh)")
     public void selectPriceLowToHighTest() {
 
         HousingPage housing = new HousingPage(page);
@@ -48,7 +49,7 @@ public class HousingTests extends BaseTest {
           Sorting on housing page "newest"	 
     */
     
-    @Test
+    @Test (testName = "Sorting on housing page - newest")
     public void selectNewestTest() {
 
         HousingPage housing = new HousingPage(page);
@@ -67,7 +68,7 @@ public class HousingTests extends BaseTest {
             Sorting on housing page "relevance"	 
       */
     
-    @Test
+    @Test (testName = "Sorting on housing page - relevance")
     public void selectRelevancetTest() {
 
         HousingPage housing = new HousingPage(page);
@@ -86,7 +87,7 @@ public class HousingTests extends BaseTest {
             Sorting on housing page "upcoming"	 
        */
     
-    @Test
+    @Test (testName = "Sorting on housing page - upcoming")
     public void selectUpcomingtTest() {
 
         HousingPage housing = new HousingPage(page);
@@ -109,7 +110,7 @@ public class HousingTests extends BaseTest {
               Sorting (price ⬆, price ⬇)
       */
     
-    @Test 
+    @Test  (testName = "Sorting (price ⬆, price ⬇)")
     public void SortingPrice() {
     	
         HousingPage housing = new HousingPage(page);
@@ -134,10 +135,10 @@ public class HousingTests extends BaseTest {
     
     
     /*
-          By default, such sorting possibilities are available (price ⬆, price ⬇, newest)
+          By default, sorting possibilities available: (price ⬆, price ⬇, newest)
      */
     
-    @Test
+    @Test (testName = "By default, sorting possibilities available: (price ⬆, price ⬇, newest)")
     public void ByDefaultSortingPossibilities() {
     	
         HousingPage housing = new HousingPage(page);
@@ -171,12 +172,12 @@ public class HousingTests extends BaseTest {
     
     
     /*
-               After using search such sorting possibilities are available (price ⬆, price ⬇, newest, upcoming,
-               relevant)
+               After using search, sorting possibilities available : (price ⬆, price ⬇, newest, upcoming,
+               relevance)
      */
     
     
-    @Test
+    @Test (testName = "After using search, sorting possibilities available : (price ⬆, price ⬇, newest, upcoming, relevance)")
     public void AfterUsingSearchSortingPossibilities() {
 
         HousingPage housing = new HousingPage(page);
@@ -198,35 +199,35 @@ public class HousingTests extends BaseTest {
         housing.openSortDropdown();
         housing.selectPriceHighToLow();
         
-      String selected1 = housing.getSelectedSortText();
+        String selected1 = housing.getSelectedSortText();
 
-      Assert.assertEquals(selected1, "£££ → £");
+        Assert.assertEquals(selected1, "£££ → £");
    
       
       
-      housing.openSortDropdown();
-      housing.selectPriceLowToHigh();
-      
-      String selected2 = housing.getSelectedLowToHighText();
+        housing.openSortDropdown();
+        housing.selectPriceLowToHigh();
+      	
+        String selected2 = housing.getSelectedLowToHighText();
 
-      Assert.assertEquals(selected2, "£ → £££");
+        Assert.assertEquals(selected2, "£ → £££");
        
       
       
-      housing.openSortDropdown();
-      housing.selectRelevance();
+        housing.openSortDropdown();
+        housing.selectRelevance();
 
-      String selected3 = housing.getselectRelevanceText();
+        String selected3 = housing.getselectRelevanceText();
 
-      Assert.assertEquals(selected3, "relevance");
+        Assert.assertEquals(selected3, "relevance");
       
       
-      housing.openSortDropdown();
-      housing.selectUpcoming();
+        housing.openSortDropdown();
+        housing.selectUpcoming();
 
-      String selected4 = housing.getselectUpcomingText();
+        String selected4 = housing.getselectUpcomingText();
 
-      Assert.assertEquals(selected4, "upcoming");
+        Assert.assertEquals(selected4, "upcoming");
       
 
    
